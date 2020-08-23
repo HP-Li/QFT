@@ -19,11 +19,11 @@ V^\alpha\to(\delta^{\alpha}_{\beta}-\frac{i}{2}\omega_{\mu\nu}i(\delta^{\mu}_{\a
 $$
 
 $$
-\begin{align}
+\begin{aligned}
 V^\alpha\to&(\delta^{\alpha}_{\beta}-\frac{i}{2}\omega_{12}i(\delta^{1}_{\alpha'}\delta^{2}_{\beta}-\delta^{1}_{\beta}\delta^{2}_{\alpha'})g^{\alpha\alpha'}-\frac{i}{2}\omega_{21}i(\delta^{2}_{\alpha'}\delta^{1\beta}-\delta^{2\beta}\delta^{1}_{\alpha'})g^{\alpha\alpha'})V^{\beta}\\
 &=(\delta^{\alpha}_{\beta}+\frac{1}{2}\theta(\delta^{1}_{\alpha'}\delta^{2}_{\beta}-\delta^{1}_{\beta}\delta^{2}_{\alpha'})g^{\alpha\alpha'}-\frac{1}{2}\theta(\delta^{2}_{\alpha'}\delta^{1}_{\beta}-\delta^{2}_{\beta}\delta^{1}_{\alpha'})g^{\alpha\alpha'})V^{\beta}\\
 &=(\delta^{\alpha}_{\beta}+\theta\delta^{1}_{\alpha'}\delta^{2}_{\beta}g^{\alpha\alpha'}-\theta\delta^{1}_{\beta}\delta^{2}_{\alpha'}g^{\alpha\alpha'})V^{\beta}
-\end{align}
+\end{aligned}
 $$
 
 so
@@ -38,11 +38,11 @@ V\to
 $$
 which is just an infinitesimal rotation in the $xy$-plane. verify that setting $\omega_{01}=-\omega_{10}=\beta$
 $$
-\begin{align}
+\begin{aligned}
 V^\alpha\to&(\delta^\alpha_\beta-\frac{i}{2}\omega_{01}i(\delta^{0}_{\alpha'}\delta^1_\beta-\delta^0_\beta\delta^{1}_{\alpha'})g^{\alpha\alpha'}-\frac{i}{2}\omega_{10}i(\delta^{1}_{\alpha'}\delta^0_\beta-\delta^1_\beta\delta^{0}_{\alpha'})g^{\alpha\alpha'})V^\beta\\
 &=(\delta^\alpha_\beta+\frac{1}{2}\beta(\delta^{0}_{\alpha'}\delta^1_\beta-\delta^0_\beta\delta^{1}_{\alpha'})g^{\alpha\alpha'}-\frac{1}{2}\beta(\delta^{1}_{\alpha'}\delta^0_\beta-\delta^1_\beta\delta^{0}_{\alpha'})g^{\alpha\alpha'})V^\beta\\
 &=(\delta^\alpha_\beta+\beta\delta^{0}_{\alpha'}\delta^1_\beta g^{\alpha\alpha'}-\beta\delta^0_\beta\delta^{1}_{\alpha'} g^{\alpha\alpha'})V^\beta
-\end{align}
+\end{aligned}
 $$
 so
 $$
@@ -78,13 +78,13 @@ $$
 
 The matrices representing the Lorentz algebra are then
 $$
-\begin{align}
+\begin{aligned}
 S^{ij}=&\frac{i}{4}[\gamma^i,\gamma^j]\\
 =&\frac{i}{4}[i\sigma^i,i\sigma^j]\\
 =&-\frac{i}{4}[\sigma^i,\sigma^j]\\
 =&-\frac{i}{4}2i\epsilon^{ijk}\sigma^k\\
 =&\frac{1}{2}\epsilon^{ijk}\sigma^k
-\end{align}
+\end{aligned}
 $$
 Now let us find Dirac matrices $\gamma^\mu$ for four-dimensional Minkowski space.
 $$
@@ -102,8 +102,7 @@ $$
 This representations is called the *Weyl* or *chiral* representation.In our representation, the boost and rotation generators are
 
 $$
-\begin{equation}
-\begin{split}
+\begin{aligned}
 S^{0i}=&\frac{i}{4}[\gamma^0,\gamma^i]\\
 =&\frac{i}{4}(\gamma^0\gamma^i-\gamma^0\gamma^i)\\
 =&\frac{i}{4}
@@ -129,14 +128,13 @@ S^{0i}=&\frac{i}{4}[\gamma^0,\gamma^i]\\
 \sigma^i&0\\
 0&-\sigma^i
 \end{pmatrix}
-\end{split}\tag{3.26}
-\end{equation}
+\end{aligned}
+\tag{3.26}
 $$
 
 and
 $$
-\begin{equation}
-\begin{split}
+\begin{aligned}
 S^{ij}=&\frac{i}{4}[\gamma^i,\gamma^j]\\
 =&\frac{i}{4}\left(
 \begin{pmatrix}
@@ -182,8 +180,7 @@ S^{ij}=&\frac{i}{4}[\gamma^i,\gamma^j]\\
 0&\sigma^k
 \end{pmatrix}\\
 \equiv&\frac{1}{2}\epsilon^{ijk}\Sigma^k
-\end{split}
-\end{equation}
+\end{aligned}
 \tag{3.27}
 $$
 
@@ -196,7 +193,7 @@ $$
 This works because the spinor transformation matrices (3.26) and (3.27) operate only in the “internal” space; they go right through the differential operator. But it is possible to write a stronger, first-order equation, which implies Klein-Gordon equation but contains additional information. To do this we need to know one more property of the $\gamma$ matrices. With a short computation you can verify that
 [^note]: this case is $\mu,\rho,\sigma$ isn't equal to zero
 $$
-\begin{split}
+\begin{aligned}
 [\gamma^\mu,S^{\rho\sigma}]=&[\gamma^\mu,\frac{1}{2}\epsilon^{\rho\sigma}_{\quad\alpha}\Sigma^\alpha]\\
 =&\frac{1}{2}\epsilon^{\rho\sigma}_{\quad\alpha}[\gamma^\mu,\Sigma^\alpha]\\
 =&\frac{1}{2}\epsilon^{\rho\sigma}_{\quad\alpha}
@@ -208,12 +205,11 @@ $$
 =&i\epsilon^{\alpha\rho\sigma}\epsilon^{\alpha\nu\mu}\gamma^\nu\\
 =&i(\delta^{\rho}_{\ \ \nu}\delta^{\sigma\mu}-\delta^{\rho\mu}\delta^{\sigma}_{\ \ \nu})\gamma^\nu\\
 =&(\mathcal{J}^{\rho\sigma})^\mu_{\ \ \nu}\gamma^\nu
-\end{split}
+\end{aligned}
 $$
 [^note]:if $\rho$ is zero
 $$
-\begin{equation}
-\begin{split}
+\begin{aligned}
 	[\gamma^{\mu},S^{0\sigma}]=&[\gamma^{\mu},-\frac{i}{2}
 \begin{pmatrix}
 	\sigma^{\sigma} & 0 \\
@@ -258,13 +254,11 @@ $$
 \end{pmatrix}\\
 =&i\delta^{\mu\sigma}\gamma^{0}\\
 =&(\mathcal{J}^{0\sigma})^{\mu}_{\ \ \nu}\gamma^{\nu}
-\end{split}
-\end{equation}
+\end{aligned}
 $$
 [^note]:if $\mu$ is zero
 $$
-\begin{equation}
-\begin{split}
+\begin{aligned}
 	[\gamma^{0},\frac{1}{2}\epsilon^{\rho\sigma\nu}\Sigma^{\nu}]=&\frac{1}{2}\epsilon^{\rho\sigma\nu}
 \begin{pmatrix}
 	0 & 1 \\
@@ -294,7 +288,6 @@ $$
 \end{pmatrix}\\
 =&0\\
 =&(\mathcal{J}^{\rho\sigma})^{0}_{\ \ \nu}\gamma^{\nu}
-\end{split}
-\end{equation}
+\end{aligned}
 $$
 
