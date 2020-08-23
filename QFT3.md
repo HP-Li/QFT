@@ -1,3 +1,7 @@
+
+
+
+
 # Dirac Field
 
 ## Lorentz Invariance in Wave Equations
@@ -11,14 +15,14 @@ $$
 
 For example, consider the case $\omega_{12}=-\omega_{21}=\theta$, with all other components of $\omega$ equal to zero.
 $$
-V^\alpha\to(\delta^\alpha_\beta-\frac{i}{2}\omega_{\mu\nu}i(\delta^{\mu\alpha}\delta^\nu_\beta-\delta^\mu_\beta\delta^{\nu\alpha}))V^\beta
+V^\alpha\to(\delta^{\alpha}_{\beta}-\frac{i}{2}\omega_{\mu\nu}i(\delta^{\mu}_{\alpha'}\delta^{\nu}_{\beta}-\delta^{\mu}_{\beta}\delta^{\nu}_{\alpha'})g^{\alpha\alpha'})V^{\beta}
 $$
 
 $$
 \begin{align}
-V^\alpha\to&(\delta^\alpha_\beta-\frac{i}{2}\omega_{12}i(\delta^{1\alpha}\delta^2_\beta-\delta^1_\beta\delta^{2\alpha})-\frac{i}{2}\omega_{21}i(\delta^{2\alpha}\delta^1_\beta-\delta^2_\beta\delta^{1\alpha}))V^\beta\\
-&=(\delta^\alpha_\beta+\frac{1}{2}\theta(\delta^{1\alpha}\delta^2_\beta-\delta^1_\beta\delta^{2\alpha})-\frac{1}{2}\theta(\delta^{2\alpha}\delta^1_\beta-\delta^2_\beta\delta^{1\alpha}))V^\beta\\
-&=(\delta^\alpha_\beta+\theta\delta^{1\alpha}\delta^2_\beta-\theta\delta^1_\beta\delta^{2\alpha})V^\beta
+V^\alpha\to&(\delta^{\alpha}_{\beta}-\frac{i}{2}\omega_{12}i(\delta^{1}_{\alpha'}\delta^{2}_{\beta}-\delta^{1}_{\beta}\delta^{2}_{\alpha'})g^{\alpha\alpha'}-\frac{i}{2}\omega_{21}i(\delta^{2}_{\alpha'}\delta^{1\beta}-\delta^{2\beta}\delta^{1}_{\alpha'})g^{\alpha\alpha'})V^{\beta}\\
+&=(\delta^{\alpha}_{\beta}+\frac{1}{2}\theta(\delta^{1}_{\alpha'}\delta^{2}_{\beta}-\delta^{1}_{\beta}\delta^{2}_{\alpha'})g^{\alpha\alpha'}-\frac{1}{2}\theta(\delta^{2}_{\alpha'}\delta^{1}_{\beta}-\delta^{2}_{\beta}\delta^{1}_{\alpha'})g^{\alpha\alpha'})V^{\beta}\\
+&=(\delta^{\alpha}_{\beta}+\theta\delta^{1}_{\alpha'}\delta^{2}_{\beta}g^{\alpha\alpha'}-\theta\delta^{1}_{\beta}\delta^{2}_{\alpha'}g^{\alpha\alpha'})V^{\beta}
 \end{align}
 $$
 
@@ -32,12 +36,12 @@ V\to
 0&0&0&1
 \end{pmatrix}V
 $$
-which is just an infinitesimal rotation in the $xy$-plane. verify that setting $\omega_{01}=-\omega_{10}=\beta$ 
+which is just an infinitesimal rotation in the $xy$-plane. verify that setting $\omega_{01}=-\omega_{10}=\beta$
 $$
 \begin{align}
-V^\alpha\to&(\delta^\alpha_\beta-\frac{i}{2}\omega_{01}i(\delta^{0\alpha}\delta^1_\beta-\delta^0_\beta\delta^{1\alpha})-\frac{i}{2}\omega_{10}i(\delta^{1\alpha}\delta^0_\beta-\delta^1_\beta\delta^{0\alpha}))V^\beta\\
-&=(\delta^\alpha_\beta+\frac{1}{2}\beta(\delta^{0\alpha}\delta^1_\beta-\delta^0_\beta\delta^{1\alpha})-\frac{1}{2}\beta(\delta^{1\alpha}\delta^0_\beta-\delta^1_\beta\delta^{0\alpha}))V^\beta\\
-&=(\delta^\alpha_\beta+\beta\delta^{0\alpha}\delta^1_\beta-\beta\delta^0_\beta\delta^{1\alpha})V^\beta
+V^\alpha\to&(\delta^\alpha_\beta-\frac{i}{2}\omega_{01}i(\delta^{0}_{\alpha'}\delta^1_\beta-\delta^0_\beta\delta^{1}_{\alpha'})g^{\alpha\alpha'}-\frac{i}{2}\omega_{10}i(\delta^{1}_{\alpha'}\delta^0_\beta-\delta^1_\beta\delta^{0}_{\alpha'})g^{\alpha\alpha'})V^\beta\\
+&=(\delta^\alpha_\beta+\frac{1}{2}\beta(\delta^{0}_{\alpha'}\delta^1_\beta-\delta^0_\beta\delta^{1}_{\alpha'})g^{\alpha\alpha'}-\frac{1}{2}\beta(\delta^{1}_{\alpha'}\delta^0_\beta-\delta^1_\beta\delta^{0}_{\alpha'})g^{\alpha\alpha'})V^\beta\\
+&=(\delta^\alpha_\beta+\beta\delta^{0}_{\alpha'}\delta^1_\beta g^{\alpha\alpha'}-\beta\delta^0_\beta\delta^{1}_{\alpha'} g^{\alpha\alpha'})V^\beta
 \end{align}
 $$
 so
@@ -52,7 +56,7 @@ V\to
 $$
 an infinitesimal boost in the $x$-direction. The other components of $\omega$ generate the remaining boosts and rotations in a similar manner.
 
-[^note]:I can’t gives it , but if the $\delta$ is $g$ in the $\mathcal{J}$, I could gives it
+[^note]:I forget the $g$ when I first calculate it. Don’t forget it!
 
 ## The Dirac Equation
 
@@ -190,6 +194,7 @@ $$
 (\partial^2+m^2)\psi=0
 $$
 This works because the spinor transformation matrices (3.26) and (3.27) operate only in the “internal” space; they go right through the differential operator. But it is possible to write a stronger, first-order equation, which implies Klein-Gordon equation but contains additional information. To do this we need to know one more property of the $\gamma$ matrices. With a short computation you can verify that
+[^note]: this case is $\mu,\rho,\sigma$ isn't equal to zero
 $$
 \begin{split}
 [\gamma^\mu,S^{\rho\sigma}]=&[\gamma^\mu,\frac{1}{2}\epsilon^{\rho\sigma}_{\quad\alpha}\Sigma^\alpha]\\
@@ -205,3 +210,91 @@ $$
 =&(\mathcal{J}^{\rho\sigma})^\mu_{\ \ \nu}\gamma^\nu
 \end{split}
 $$
+[^note]:if $\rho$ is zero
+$$
+\begin{equation}
+\begin{split}
+	[\gamma^{\mu},S^{0\sigma}]=&[\gamma^{\mu},-\frac{i}{2}
+\begin{pmatrix}
+	\sigma^{\sigma} & 0 \\
+	0 & -\sigma^{\sigma} \\
+\end{pmatrix}
+]\\
+=&\frac{-i}{2}
+\begin{pmatrix}
+	0 & \sigma^{\mu} \\
+	-\sigma^{\mu} &0  \\
+\end{pmatrix}
+\begin{pmatrix}
+	\sigma^{\sigma} & 0 \\
+	0 & -\sigma^{\sigma} \\
+\end{pmatrix}+\frac{i}{2}
+\begin{pmatrix}
+	\sigma^{\sigma} & 0 \\
+	0 & -\sigma^{\sigma} \\
+\end{pmatrix}
+\begin{pmatrix}
+	0 & \sigma^{\mu} \\
+	-\sigma^{\mu} &0  \\
+\end{pmatrix}\\
+=&-\frac{i}{2}
+\begin{pmatrix}
+	0 & -\sigma^{\mu}\sigma^{\sigma} \\
+	-\sigma^{\mu}\sigma^{\sigma} & 0 \\
+\end{pmatrix}+\frac{i}{2}
+\begin{pmatrix}
+	0 & \sigma^{\sigma}\sigma^{\mu} \\
+	\sigma^{\sigma}\sigma^{\mu} & 0 \\
+\end{pmatrix}\\
+=&\frac{i}{2}
+\begin{pmatrix}
+	0 & \{\sigma^{\mu},\sigma^{\sigma}\} \\
+	 \{\sigma^{\mu},\sigma^{\sigma}\}& 0 \\
+\end{pmatrix}\\
+=&\frac{i}{2}
+\begin{pmatrix}
+	0 & 2\delta^{\mu\sigma} \\
+	 2\delta^{\mu\sigma}& 0 \\
+\end{pmatrix}\\
+=&i\delta^{\mu\sigma}\gamma^{0}\\
+=&(\mathcal{J}^{0\sigma})^{\mu}_{\ \ \nu}\gamma^{\nu}
+\end{split}
+\end{equation}
+$$
+[^note]:if $\mu$ is zero
+$$
+\begin{equation}
+\begin{split}
+	[\gamma^{0},\frac{1}{2}\epsilon^{\rho\sigma\nu}\Sigma^{\nu}]=&\frac{1}{2}\epsilon^{\rho\sigma\nu}
+\begin{pmatrix}
+	0 & 1 \\
+	1 & 0 \\
+\end{pmatrix}
+\begin{pmatrix}
+	\sigma^{\nu} & 0 \\
+	0 & \sigma^{\nu} \\
+\end{pmatrix}-\frac{1}{2}\epsilon^{\rho,\sigma,\nu}
+\begin{pmatrix}
+	\sigma^{\nu} & 0 \\
+	0 & \sigma^{\nu} \\
+\end{pmatrix}
+\begin{pmatrix}
+	0 & 1 \\
+	1 & 0 \\
+\end{pmatrix}\\
+=&\frac{1}{2}\epsilon^{\rho\sigma\nu}
+\begin{pmatrix}
+	0 & \sigma^{\nu} \\
+	\sigma^{\nu} & 0 \\
+\end{pmatrix}-
+\frac{1}{2}\epsilon^{\rho\sigma\nu}
+\begin{pmatrix}
+	0 & \sigma^{\nu} \\
+	\sigma^{\nu} & 0 \\
+\end{pmatrix}\\
+=&0\\
+=&(\mathcal{J}^{\rho\sigma})^{0}_{\ \ \nu}\gamma^{\nu}
+\end{split}
+\end{equation}
+$$
+
