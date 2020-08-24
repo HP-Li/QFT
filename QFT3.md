@@ -294,11 +294,11 @@ $$
 =&\gamma^{\mu}-\frac{i}{2}\omega_{\rho\sigma}(\mathcal{J}^{\rho\sigma})^{\mu}_{\ \nu}\gamma^{\nu}\\
 =&(g_{\nu}^{\mu}-\frac{i}{2}\omega_{\rho\sigma}(\mathcal{J}^{\rho\sigma})^{\mu}_{\ \nu})\gamma^{\nu}\\
 =&(\delta_{\nu}^{\mu}-\frac{i}{2}\omega_{\rho\sigma}(\mathcal{J}^{\rho\sigma})^{\mu}_{\ \nu})\gamma^{\nu}
-\end{aligned}\tag{3.29}
+\end{aligned}
 $$
 This equation is just the infinitesimal from of
 $$
-	\Lambda^{-1}_{\frac{1}{2}}\gamma^{\mu}\Lambda_{\frac{1}{2}}=\Lambda^{\mu}_{\ \nu}\gamma^{\nu}
+	\Lambda^{-1}_{\frac{1}{2}}\gamma^{\mu}\Lambda_{\frac{1}{2}}=\Lambda^{\mu}_{\ \nu}\gamma^{\nu}\tag{3.29}
 $$
 where
 $$
@@ -307,7 +307,7 @@ $$
 is the spinor representation of the Lorentz transformation $\Lambda$. Equation (3.29) says that the $\gamma$ matrices are invariant under simultaneous rotations of their vector and spinor indices (just like the $\sigma^{i}$ under spatial rotations). In other words, we can "take the vector index $\mu$ on $\gamma^{\mu}$ seriously," and dot $\gamma^{\mu}$ into $\partial_{\mu}$ to form a Lorentz-invariant differential operator.
 We are now ready to wirte down the Dirac equation. Here it is:
 $$
-	(i\gamma^{\mu}\partial_{\mu}-m)\psi(x)=0
+	(i\gamma^{\mu}\partial_{\mu}-m)\psi(x)=0\tag{3.31}
 $$
 To show that it is Lorentz invariant, write down the Lorentz-transformed version of the left-hand side and calculate:
 $$
@@ -317,14 +317,14 @@ $$
 =&\Lambda_{\frac{1}{2}}[i\Lambda^{-1}_{\frac{1}{2}}\gamma^{\mu}\Lambda_{\frac{1}{2}}(\Lambda^{-1})^{\nu}_{\mu}\partial_{\nu}-m]\psi(\Lambda^{-1}x)\\
 =&\Lambda_{\frac{1}{2}}[i\Lambda^{\mu}_{\ \ \sigma}\gamma^{\sigma}(\Lambda^{-1})^{\nu}_{\ \ \mu}\partial_{\nu}-m]\psi(\Lambda^{-1}x)\\
 =&\Lambda_{\frac{1}{2}}[i\gamma^{\nu}\partial_{\nu}-m]\psi(\Lambda^{-1}x)\\
-=0n
+=&0
 \end{aligned}
 $$
 To see that the Dirac equation implies the Klein-Gordon equation, act on the left with $(-i\gamma^{\mu}\partial_{\mu}-m)$:
 $$
 \begin{aligned}
-	0=&(-i\gamma^{\mu}\partial_{\mu}-m)(i\gamma^{\nu}\partial_{\nu}-m)\psi\\
-=&(\gamma^{\mu}\gamma^{\nu}\partial_{\mu}\partial_{\nu}_m^2)\psi\\
+0=&(-i\gamma^{\mu}\partial_{\mu}-m)(i\gamma^{\nu}\partial_{\nu}-m)\psi\\
+=&(\gamma^{\mu}\gamma^{\nu}\partial_{\mu}\partial_{\nu}-m^2)\psi\\
 =&(\frac{1}{2}\{\gamma^{\mu},\gamma^{\nu}\}\partial_{\mu}\partial_{\nu}+m^2)\psi
 =(\partial^2+m^2)\psi
 \end{aligned}
@@ -334,4 +334,81 @@ The solution is to define
 $$
 	\bar{\psi}\equiv\psi^{\dagger}\gamma^{0}
 $$
-Under an infinitesimal Lorentz transformation parametrized by $\omega_{\mu\nu}$, we have $\bar{\psi}\to\psi^{\dagger}(1+\frac{i}{2}\omega_{\mu\nu}(S^{\mu\nu})^{\dagger})\gamma^{0}$. The sum over $\mu$ and $\nu$ has six distinct nonzero terms. In the rotation terms, where $\mu$ and $\nu$ are both nonzero, $(S^{\mu\nu})^{\dagger}=S^{\mu\nu}$ and $S^{\mu\nu}$ commutes with $\gamma^{0}$. In the boost terms, where $\mu$ or $\nu$ is 0,
+Under an infinitesimal Lorentz transformation parametrized by $\omega_{\mu\nu}$, we have $\bar{\psi}\to\psi^{\dagger}(1+\frac{i}{2}\omega_{\mu\nu}(S^{\mu\nu})^{\dagger})\gamma^{0}$. The sum over $\mu$ and $\nu$ has six distinct nonzero terms. In the rotation terms, where $\mu$ and $\nu$ are both nonzero, $(S^{\mu\nu})^{\dagger}=S^{\mu\nu}$ and $S^{\mu\nu}$ commutes with $\gamma^{0}$. In the boost terms, where $\mu$ or $\nu$ is 0, $(S^{\mu\nu})^{\dagger}=-(S^{\mu\nu})$ but $S^{\mu\nu}$ anticommutes with $\gamma^{0}$. Passing the $\gamma^{0}$ to the left therefore removes the dagger from $S^{\mu\nu}$, yielding the transformation law
+$$
+	\bar{\psi}\to\bar{\psi}\Lambda^{-1}_{\frac{1}{2}}
+$$
+and therefore the quantity $\bar{\psi}\psi$ is a Lorentz scalar. Similarly you can show (with the aid of (3.29)) that $\bar{\psi}\gamma^{\mu}\psi$ is a Lorentz vector.
+The correct, Lorentz-invariant Dirac Lagrangian is therefore
+$$
+	\mathcal{L}_{Dirac}=\bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi
+$$
+The Euler-Lagrange equation for $\bar{\psi}$ (or $\psi^{\dagger}$) immediately yields the Dirac equation in the form (3.31); the Euler-Lagrange equation for $\psi$ gives the same equation, in Hermitian-conjugate form:
+$$
+	-i\partial_{\mu}\bar{\psi}\gamma^{\mu}-m\bar{\psi}=0
+$$
+## Weyl Spinors
+From the block-diagonal from of the generators (3.26) and (3.27), it is apparent that the Dirac representation of the Lorentz group is reducible. We can form two 2-dimensional representations by considering each block separately, and writing
+$$
+	\psi=
+\begin{pmatrix}
+	\psi_{L} \\
+	\psi_{R} \\
+\end{pmatrix}\tag{3.36}
+$$
+The two-component objects $\psi_{L}$ and $\psi_{R}$ are called left-handed and right-handed *Weyl spinors*. You can easily verify that their transformation laws, under infinitesimal rotations $\theta$ and boosts $\beta$, are
+$$
+\begin{aligned}
+	\psi_{L}\to&(1-i\theta\cdot\frac{\sigma}{2}-\beta\cdot\frac{\sigma}{2})\psi_{L};\\
+\psi_{R}\to&(1-i\theta\cdot\frac{\sigma}{2}+\beta\cdot\frac{\sigma}{2})\psi_{R}.
+\end{aligned}
+$$
+These transformation laws are connected by complex conjugation; using the identity
+$$
+	\sigma^2\sigma^{*}=-\sigma\sigma^2
+$$
+it is not hard to show that the quantity $\sigma^2\psi_{L}^{*}$ transforms like a right-handed spinor.
+In terms of $\psi_{L}$ and $\psi_{R}$, the Dirac equation is
+$$
+	(i\gamma^{\mu}\partial_{\mu}-m)\psi=
+\begin{pmatrix}
+	-m & i(\partial_{0}+\sigma\cdot\nabla) \\
+	i(\partial_{0}-\sigma\cdot\nabla) &-m  \\
+\end{pmatrix}
+\begin{pmatrix}
+	\psi_{L} \\
+	\psi_{R} \\
+\end{pmatrix}=0
+$$
+The two Lorentz group representations $\psi_{L}$ and $\psi_{R}$ are mixed by the mass term in the Dirac equation. But if we set $m=0$, the equations for $\psi_{L}$ and $\psi_{R}$ decouple:
+$$
+\begin{aligned}
+	i(\partial_{0}-\sigma\cdot\nabla)\psi_{L}=0;\\
+i(\partial_{0}+\sigma\cdot\nabla)\psi_{R}=0.
+\end{aligned}
+$$
+These are called the Weyl equations; they are especially important when treating neutrinos and the theory of weak interactions.
+It is possible to clean up this notation slightly. Define
+$$
+	\sigma^{\mu}\equiv(1,\sigma),\quad\bar{\sigma}\equiv(1,-\sigma),
+$$
+so that
+$$
+	\gamma^{\mu}=
+\begin{pmatrix}
+	0 & \sigma^{\mu} \\
+	\bar{\sigma}^{\mu} & 0 \\
+\end{pmatrix}
+$$
+(The bar on $\bar{\sigma}$ has absolutely nothing to do with the bar on $\bar{\psi}$) Then the Dirac equation can be written
+$$
+	\begin{pmatrix}
+		-m & i\sigma\cdot\partial \\
+		i\bar{\sigma}\cdot\parial & -m \\
+	\end{pmatrix}
+\begin{pmatrix}
+	\psi_{L} \\
+	\psi_{R} \\
+\end{pmatrix}=0
+$$
+
