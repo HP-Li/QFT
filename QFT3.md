@@ -1,7 +1,3 @@
-
-
-
-
 # Dirac Field
 
 ## Lorentz Invariance in Wave Equations
@@ -290,4 +286,52 @@ $$
 =&(\mathcal{J}^{\rho\sigma})^{0}_{\ \ \nu}\gamma^{\nu}
 \end{aligned}
 $$
-
+or equivalently,
+$$
+\begin{aligned}
+	(1+\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma})\gamma^{\mu}(1-\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma})=&(\gamma^{\mu}+\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma}\gamma^{\mu})(1-\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma})\\
+=&\gamma^{\mu}+\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma}\gamma^{\mu}-\frac{i}{2}\omega_{\rho\sigma}\gamma^{\mu}S^{\rho\sigma}\\
+=&\gamma^{\mu}-\frac{i}{2}\omega_{\rho\sigma}(\mathcal{J}^{\rho\sigma})^{\mu}_{\ \nu}\gamma^{\nu}\\
+=&(g_{\nu}^{\mu}-\frac{i}{2}\omega_{\rho\sigma}(\mathcal{J}^{\rho\sigma})^{\mu}_{\ \nu})\gamma^{\nu}\\
+=&(\delta_{\nu}^{\mu}-\frac{i}{2}\omega_{\rho\sigma}(\mathcal{J}^{\rho\sigma})^{\mu}_{\ \nu})\gamma^{\nu}
+\end{aligned}\tag{3.29}
+$$
+This equation is just the infinitesimal from of
+$$
+	\Lambda^{-1}_{\frac{1}{2}}\gamma^{\mu}\Lambda_{\frac{1}{2}}=\Lambda^{\mu}_{\ \nu}\gamma^{\nu}
+$$
+where
+$$
+	\Lambda_{\frac{1}{2}}=exp(-\frac{i}{2}\omega_{\mu\nu}S^{\mu\nu})
+$$
+is the spinor representation of the Lorentz transformation $\Lambda$. Equation (3.29) says that the $\gamma$ matrices are invariant under simultaneous rotations of their vector and spinor indices (just like the $\sigma^{i}$ under spatial rotations). In other words, we can "take the vector index $\mu$ on $\gamma^{\mu}$ seriously," and dot $\gamma^{\mu}$ into $\partial_{\mu}$ to form a Lorentz-invariant differential operator.
+We are now ready to wirte down the Dirac equation. Here it is:
+$$
+	(i\gamma^{\mu}\partial_{\mu}-m)\psi(x)=0
+$$
+To show that it is Lorentz invariant, write down the Lorentz-transformed version of the left-hand side and calculate:
+$$
+\begin{aligned}
+	[i\gamma^{\mu}\partial_{\mu}]\psi(x)\to&[i\gamma^{\mu}(\Lambda^{-1})^{\nu}_{\ \ \mu}\partial_{\nu}-m]\Lambda_{\frac{1}{2}}\psi(\Lambda^{-1}x)\\
+=&\Lambda_{\frac{1}{2}}\Lambda_{\frac{1}{2}}^{-1}[i\gamma^{\mu}(\Lambda^{-1})^{\nu}_{\mu}\partial_{\nu}-m]\Lambda_{\frac{1}{2}}\psi(\Lambda^{-1}x)\\
+=&\Lambda_{\frac{1}{2}}[i\Lambda^{-1}_{\frac{1}{2}}\gamma^{\mu}\Lambda_{\frac{1}{2}}(\Lambda^{-1})^{\nu}_{\mu}\partial_{\nu}-m]\psi(\Lambda^{-1}x)\\
+=&\Lambda_{\frac{1}{2}}[i\Lambda^{\mu}_{\ \ \sigma}\gamma^{\sigma}(\Lambda^{-1})^{\nu}_{\ \ \mu}\partial_{\nu}-m]\psi(\Lambda^{-1}x)\\
+=&\Lambda_{\frac{1}{2}}[i\gamma^{\nu}\partial_{\nu}-m]\psi(\Lambda^{-1}x)\\
+=0n
+\end{aligned}
+$$
+To see that the Dirac equation implies the Klein-Gordon equation, act on the left with $(-i\gamma^{\mu}\partial_{\mu}-m)$:
+$$
+\begin{aligned}
+	0=&(-i\gamma^{\mu}\partial_{\mu}-m)(i\gamma^{\nu}\partial_{\nu}-m)\psi\\
+=&(\gamma^{\mu}\gamma^{\nu}\partial_{\mu}\partial_{\nu}_m^2)\psi\\
+=&(\frac{1}{2}\{\gamma^{\mu},\gamma^{\nu}\}\partial_{\mu}\partial_{\nu}+m^2)\psi
+=(\partial^2+m^2)\psi
+\end{aligned}
+$$
+To write down a Lagrangian for the Dirac theory, we must figure out how to multiply two Dirac spinors to form a Lorentz scalar. The obvious guess, $\psi^{\dagger}\psi$, does not work. Under a Lorentz boost this becomes $\psi^{\dagger}\Lambda^{\dagger}_{\frac{1}{2}}\Lambda_{\frac{1}{2}}\psi$; if the boost matrix were unitary, we would have $\Lambda^{\dagger}_{\frac{1}{2}}=\Lambda^{-1}_{\frac{1}{2}}$ and everything would be fine. But $\Lambda_{\frac{1}{2}}$ is not unitary, because the generators (3.26) are not Hermitian.
+The solution is to define
+$$
+	\bar{\psi}\equiv\psi^{\dagger}\gamma^{0}
+$$
+Under an infinitesimal Lorentz transformation parametrized by $\omega_{\mu\nu}$, we have $\bar{\psi}\to\psi^{\dagger}(1+\frac{i}{2}\omega_{\mu\nu}(S^{\mu\nu})^{\dagger})\gamma^{0}$. The sum over $\mu$ and $\nu$ has six distinct nonzero terms. In the rotation terms, where $\mu$ and $\nu$ are both nonzero, $(S^{\mu\nu})^{\dagger}=S^{\mu\nu}$ and $S^{\mu\nu}$ commutes with $\gamma^{0}$. In the boost terms, where $\mu$ or $\nu$ is 0,
