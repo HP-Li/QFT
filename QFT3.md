@@ -387,7 +387,7 @@ $$
 i(\partial_{0}+\sigma\cdot\nabla)\psi_{R}=0.
 \end{aligned}
 $$
-These are called the Weyl equations; they are especially important when treating neutrinos and the theory of weak interactions.
+These are called the *Weyl equations*; they are especially important when treating neutrinos and the theory of weak interactions.
 It is possible to clean up this notation slightly. Define
 $$
 	\sigma^{\mu}\equiv(1,\sigma),\quad\bar{\sigma}\equiv(1,-\sigma),
@@ -402,13 +402,73 @@ $$
 $$
 (The bar on $\bar{\sigma}$ has absolutely nothing to do with the bar on $\bar{\psi}$) Then the Dirac equation can be written
 $$
-	\begin{pmatrix}
+\begin{pmatrix}
 		-m & i\sigma\cdot\partial \\
-		i\bar{\sigma}\cdot\parial & -m \\
+		i\bar{\sigma}\cdot\partial & -m \\
 	\end{pmatrix}
 \begin{pmatrix}
 	\psi_{L} \\
 	\psi_{R} \\
 \end{pmatrix}=0
 $$
+
+and the Weyl equations become
+$$
+i\bar{\sigma}\cdot\partial\psi_L=0;\quad i\sigma\cdot\partial\psi_R=0.
+$$
+## Free-Particle Solutions of the Dirac Equation
+
+To get some feel for the physics of the Dirac equation, let us now discuss its plane-wave solutions. Since a Dirac field $\psi$ obeys the Klein-Gordon equation, we know immediately that it can be written as a linear combination of plane waves:
+$$
+\psi(x)=u(p)e^{-ip\cdot x},\quad where\quad p^2=m^2\tag{3.45}
+$$
+
+[^note]:This $p$ is four-momentum.
+
+For the moment we will concentrate on solutions with positive frequency, that is, $p^0>0$. The column vector $u(p)$ must obey an additional constraint, found by plugging (3.45) into the Dirac equation:
+$$
+(\gamma^\mu p_\mu-m)u(p)=0\tag{3.46}
+$$
+It is easiest to analyze this equation in the rest frame, where $p=p_0=(m,0)$; the solution for general $p$ can then be found by boosting with $\Lambda_{\frac{1}{2}}$. In the rest frame, Eq.(3.46) becomes
+$$
+(m\gamma^0-m)u(p_0)=m
+\begin{pmatrix}
+-1&1\\
+-&-1
+\end{pmatrix}u(p_0)=0
+$$
+and the solutions are
+$$
+u(p_0)=\sqrt{m}
+\begin{pmatrix}
+\xi\\
+\xi
+\end{pmatrix},\tag{3.47}
+$$
+for any numerical two-component spinor $\xi$. We conventionally normalize $\xi$ so that $\xi^{\dagger}\xi=1$; the factor $\sqrt{m}$ has been inserted for future convenience. We can interpret the spinor $\xi$ by looking at the rotation generator (3.27): $\xi$ transforms under rotations as an ordinary two-component spinor of the rotation group, and therefore determines the spin orientation of the Dirac solution in the usual way. For example, when $\xi=\begin{pmatrix}1\\0\end{pmatrix}$, the particle has spin up along the 3-direction.
+	Notice that after applying the Dirac equation, we are free to choose only two of the four components of $u(p)$. This is just what we want, since a spin-1/2 particle has only two physical states—spin up and spin down.(Of course we are being a bit premature in talking about particles and spin. We will prove that the spin angular momentum of a Dirac particle is $\hbar/2$ when we quantize the Dirac theory in Section 3.5; for now, just notice that there are two possible solutions $u(p)$ for any momentum p.)
+	Now that we have the general form of $u(p)$ in the rest frame, we can obtain $u(p)$ in any other frame by boosting. Consider a boost along the 3-direction. First we should remind ourselves of what the boost does to the 4-momentum vector. In infinitesimal form,
+$$
+\begin{pmatrix}
+E\\p^3
+\end{pmatrix}=\left[1+\eta
+\begin{pmatrix}
+0&1\\1&0
+\end{pmatrix}\right]
+\begin{pmatrix}
+m\\0
+\end{pmatrix},
+$$
+where $\eta$ is some infinitesimal parameter. For finite $\eta$ we must write
+$$
+\begin{aligned}
+\begin{pmatrix}
+E\\p^3
+\end{pmatrix}=exp\left[\eta
+\begin{pmatrix}
+0&1\\1&0
+\end{pmatrix}\right]
+\end{aligned}
+$$
+
 
