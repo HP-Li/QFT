@@ -464,11 +464,84 @@ $$
 \begin{aligned}
 \begin{pmatrix}
 E\\p^3
-\end{pmatrix}=exp\left[\eta
+\end{pmatrix}=&\exp\left[\eta
 \begin{pmatrix}
 0&1\\1&0
 \end{pmatrix}\right]
+\begin{pmatrix}
+m\\0
+\end{pmatrix}\\
+=&\biggl[\cosh\eta
+\begin{pmatrix}
+1&0\\0&1
+\end{pmatrix}+\sinh\eta
+\begin{pmatrix}
+	0&1\\
+	1&0
+\end{pmatrix}\biggr]
+\begin{pmatrix}
+	m\\0
+\end{pmatrix}\\
+=&\begin{pmatrix}
+	m\cosh\eta\\m\sinh\eta
+\end{pmatrix}
 \end{aligned}
 $$
-
-
+The parameter $\eta$ is called the *rapidity*. It is the quantity that is additive under successsive boosts.
+	Now apply the same boost to $u(p)$. According to Eqs(3.26) and (3.30),
+$$
+\begin{aligned}
+	u(p)=&\exp\biggl[-\frac{1}{2}\eta
+\begin{pmatrix}
+	\sigma^{3} & 0 \\
+	0 & -\sigma^{3} \\
+\end{pmatrix}
+\biggr]\sqrt{m}
+\begin{pmatrix}
+	\xi \\
+	\xi \\
+\end{pmatrix}\\
+=&\biggl[\cosh\Bigl(\frac{1}{2}\eta\Bigr)
+\begin{pmatrix}
+	1&0\\0&1
+\end{pmatrix}-\sinh\Bigl(\frac{1}{2}\eta\Bigr)
+\begin{pmatrix}
+	\sigma^{3}&0\\0&\sigma^{3}
+\end{pmatrix}
+\biggr]\sqrt{m}
+\begin{pmatrix}
+	\xi \\
+	\xi \\
+\end{pmatrix}\\
+=&
+\begin{pmatrix}
+	e^{\eta/2}(\frac{1-\sigma^{3}}{2})+e^{-\eta/2}(\frac{1+\sigma^{3}}{2}) & 0 \\
+	0 & e^{\eta/2}(\frac{1+\sigma^{3}}{2})+e^{-\eta/2}(\frac{1-\sigma^{3}}{2}) \\
+\end{pmatrix}
+\sqrt{m}
+\begin{pmatrix}
+	\xi \\
+	\xi \\
+\end{pmatrix}\\
+=&
+\begin{pmatrix}
+	\Bigl[\sqrt{E+p^{3}}(\frac{1-\sigma^{3}}{2})+\sqrt{E-p^{3}}(\frac{1+\sigma^{3}}{2})\Bigr]\xi \\
+\\
+	 \Bigl[\sqrt{E+p^{3}}(\frac{1+\sigma^{3}}{2})+\sqrt{E-p^{3}}(\frac{1-\sigma^{3}}{2})\Bigr]\xi\\
+\end{pmatrix}
+\end{aligned}
+$$
+The last line can be simplified to give
+$$
+	u(p)=
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi \\
+	\sqrt{p\cdot\bar{\sigma}}\xi \\
+\end{pmatrix}\tag{3.50}
+$$
+where it is understood that in taking the square root of a matrix, we take the positive root of each eigenvalue. This expression for $u(p)$ is not only more compact, but is also valid for an arbitrary direction of $p$. When working with expressions of this form, it is often useful to know the identity
+$$
+	(p\cdot\sigma)(p\cdot\bar{\sigma})=p^2=m^2.
+$$
+You can then verify directly that (3.50) is a solution of the Dirac equation in the form of (3.43).
+	In practice it is often convenient to work
