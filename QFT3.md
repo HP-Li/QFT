@@ -550,6 +550,10 @@ $$
 \begin{pmatrix}
 	\sqrt{E-p^3}\begin{pmatrix}1\\0\end{pmatrix} \\
 	\sqrt{E+p^3}\begin{pmatrix}1\\0\end{pmatrix} \\
-\end{pmatrix}\xrightarrow[large\ boost]{}
+\end{pmatrix}\xrightarrow[large\ boost]{}\sqrt{2E}
+\begin{pmatrix}
+	0 \\
+	\begin{pmatrix}1\\0\end{pmatrix} \\
+\end{pmatrix}
 $$
 
