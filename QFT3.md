@@ -554,6 +554,33 @@ $$
 \begin{pmatrix}
 	0 \\
 	\begin{pmatrix}1\\0\end{pmatrix} \\
-\end{pmatrix}
+\end{pmatrix}\tag{3.52}
 $$
-
+while for $ \xi=\begin{pmatrix}0\\1\end{pamtarix}$(spin down along the 3-axis) we have
+$$
+	u(p)=
+\begin{pmatrix}
+	\sqrt{E+p^3}
+\begin{pmatrix}
+	0 \\
+	1 \\
+\end{pmatrix}
+ \\
+	\sqrt{E-p^3}
+\begin{pmatrix}
+	0 \\
+	1 \\
+\end{pmatrix}
+ \\
+\end{pmatrix}\xrightarrow[large\ boost]{}\sqrt{2E}
+\begin{pmatrix}
+\begin{pmatrix}
+	0 \\
+	1 \\
+\end{pmatrix}
+ \\
+	0\\
+\end{pmatrix}\tag{3.53}
+$$
+In the limit $\eta\rightarrow\infty$ the states degenerate into the two-component spinors of a massless particle. (We now see the reason for the factor of \sqrt{m} in (3.47): It keeps the spinor expressions finite in the massless limit.)
+The solutions (3.52) and (3.53)
