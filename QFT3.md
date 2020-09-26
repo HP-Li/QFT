@@ -544,4 +544,12 @@ $$
 	(p\cdot\sigma)(p\cdot\bar{\sigma})=p^2=m^2.
 $$
 You can then verify directly that (3.50) is a solution of the Dirac equation in the form of (3.43).
-	In practice it is often convenient to work
+	In practice it is often convenient to work with specific spinors $\xi$. A useful choice here would be eigenstates of $\sigma^3$. For example, if $\xi=\begin{pmatrix}1\\0\end{pmatrix}$(spin up along the 3-axis), we get
+$$
+	u(p)=
+\begin{pmatrix}
+	\sqrt{E-p^3}\begin{pmatrix}1\\0\end{pmatrix} \\
+	\sqrt{E+p^3}\begin{pmatrix}1\\0\end{pmatrix} \\
+\end{pmatrix}\xrightarrow[large\ boost]{}
+$$
+
