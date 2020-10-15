@@ -583,4 +583,13 @@ $$
 \end{pmatrix}\tag{3.53}
 $$
 In the limit $\eta\rightarrow\infty$ the states degenerate into the two-component spinors of a massless particle. (We now see the reason for the factor of \sqrt{m} in (3.47): It keeps the spinor expressions finite in the massless limit.)
-The solutions (3.52) and (3.53)
+The solutions (3.52) and (3.53) are eigenstates of the helicity operator,
+$$
+	h\equiv\hat{p}\cdot S=\frac{1}{2}\hat{p}_{i}
+\begin{pmatrix}
+	\sigma^{i} & 0 \\
+	0 & \sigma^{i} \\
+\end{pmatrix}
+$$
+A particle with $h=+\frac{1}{2}$ is called *right-handed*, while one with $h=-\frac{1}{2}$ is called *lift-handed*. The helicity of a massive particle depends on the frame of in the opposite direction (but its spin is unchanged). For a massless particle, which travels at the speed of light, one cannot perform such a boost.
+	The extremely simple form of $u(p)$ for a massless particle in a helicity eigenstate makes the behavior of such a particle easy to understand. In Chapter 1, it enabled us to guess the form of the $e^{+}e^{-}\to\mu^{+}\mu^{-}$ cross section in the massless limit. In subsequent chapters we will often do a mindless calculation first, then look at helicity eigenstates in the high-energy limit to understand what we have done.
