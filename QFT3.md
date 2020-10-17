@@ -593,3 +593,97 @@ $$
 $$
 A particle with $h=+\frac{1}{2}$ is called *right-handed*, while one with $h=-\frac{1}{2}$ is called *lift-handed*. The helicity of a massive particle depends on the frame of in the opposite direction (but its spin is unchanged). For a massless particle, which travels at the speed of light, one cannot perform such a boost.
 	The extremely simple form of $u(p)$ for a massless particle in a helicity eigenstate makes the behavior of such a particle easy to understand. In Chapter 1, it enabled us to guess the form of the $e^{+}e^{-}\to\mu^{+}\mu^{-}$ cross section in the massless limit. In subsequent chapters we will often do a mindless calculation first, then look at helicity eigenstates in the high-energy limit to understand what we have done.
+	Incidentally, we are now ready to understand the origin of the notation $\phi_{L}$ and $\phi_{R}$ for Weyl spinors. The solutions of the Weyl equations are states of definite helicity, corresponding to left- and right-handed particles, respectively. The Lorentz invariance of helicity (for a massless particle) is manifest in the notation of Weyl spinors, since $\phi_{L}$ and $\phi_{R}$ live in different representations of the Lorentz group.
+	It is covenient to write the normaliaztion condition for $u(p)$ in a Lorentz invariant way. We saw above that $\phi^{\dagger}\phi$ is not Lorentz invariant. Similary,
+$$
+\begin{aligned}
+	u^{\dagger}u=&
+\begin{pmatrix}
+	\xi^{\dagger}\sqrt{p\cdot\sigma} & \xi^{\dagger}\sqrt{p\cdot\bar{\sigma}} \\
+\end{pmatrix}\cdot
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi \\
+	\sqrt{p\cdot\bar{\sigma}}\xi \\
+\end{pmatrix}\\
+=&2E_{p}\xi^{\dagger}\xi
+\end{aligned}\tag{3.55}
+$$
+To make a Lorentz scalar we define
+$$
+	\bar{u}(p)=u^{\dagger}(p)\gamma^{0}
+$$
+Then by an almost identical calculation,
+$$
+	\bar{u}u=2m\xi^{\dagger}\xi\tag{3.57}
+$$
+This will be our normalization condition, once we also require that the two-component spinor $\xi$ be normalized as usual: $\xi^{\dagger}\xi=1$. It is also conventional to choose basis spionrs $\xi^{1}$ and $\xi^{2}$ (such as $\begin{pmatrix}1\\0\end{pmatrix}$ and $\begin{pmatrix}0\\1\end{pmatrix}$) that are orthogonal. For a massless particle Eq.(3.57) is trivial, so we must write the normalization condition in the form of (3.55)
+	Let us summarize our dicussion so far. The general solution of the Dirac equation can be wirtten as linear combination of plane waves. The positive-frequency waves are of the form
+$$
+	\psi(x)=u(p)e^{-ip\cdot x},\quad p^2=m^2,\quad p^{0}>0.
+$$
+There are two linearly independent solutions for $u(p)$,
+$$
+	u^{s}(p)=
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi^{s} \\
+	\sqrt{p\cdot\bar{\sigma}}\xi^{s} \\
+\end{pmatrix},\quad s=1,2
+$$
+which we normalize according to
+$$
+\bar{u}^{r}(p)u^{s}(p)=2m\delta^{rs}\quad or u^{r\dagger}(p)u^{s}(p)=2E_{p}\delta^{rs}
+$$
+In exactly the same way, we can find the negative-frequency solutions:
+$$
+	\psi(x)=v(p)e^{+ip\cdot x},\quad p^2=m^2,\quad p^{0}>0
+$$
+(Note that we have chosen to put the + sign into the exponential, rather than having $p^{0}<0$.) There are two linearly independent solutions for $v(p)$,
+$$
+	v^{s}(p)=
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\eta^{s} \\
+	-\sqrt{p\cdot\bar{\sigma}}\eta^{s} \\
+\end{pmatrix},\quad s=1,2
+$$
+where $\eta^{s}$ is another basis of two-component spinors. These solutions are normalized according to
+$$
+	\bar{v}^{r}v^{s}(p)=-2m\delta^{rs}\quad or v^{r\dagger}(p)v^{s}(p)=+2E_{p}\delta^{rs}.
+$$
+The u's and v's are also orthogonal to each other:
+$$
+	\bar{u}^{r}(p)v_{s}(p)=\bar{v}^{r}(p)u^{s}(p)=0
+$$
+Be careful, since $u^{r\dagger}(p)v^{s}(p)\neq0$ and $v^{r\dagger}(p)u^{s}(p)\neq0$. However, note that
+$$
+	u^{r\dagger}(p)v^{s}(-p)=v^{r\dagger}(-p)u^{s}(p)=0,
+$$
+where we have changed the sign of the 3-momentum in one factor of each spinor product.
+### Spin Sums
+In evaluating Feynman diagrams, we will often wish to sum over the polarizationg states of a fermion. We can derive the relevant completeness relations with a simple calculation:
+$$
+\begin{aligned}
+\sum_{s=1,2}u^{s}(p)\bar{u}^{s}(p)=&\sum_{s}
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi^{s} \\
+	\sqrt{p\cdot\bar{\sigma}}\xi^{s} \\
+\end{pmatrix}
+\begin{pmatrix}
+	\xi^{s\dagger}\sqrt{p\cdot\bar{\sigma}} & \xi^{s\dagger}\sqrt{p\cdot\sigma} \\
+\end{pmatrix}\\
+=&
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\sqrt{p\cdot\bar{\sigma}} & \sqrt{p\cdot\sigma}\sqrt{p\cdot\sigma} \\
+	\sqrt{p\cdot\bar{\sigma}}\sqrt{p\cdot\bar{\sigma}} & \sqrt{p\cdot\bar{\sigma}}\sqrt{p\cdot\sigma} \\
+\end{pmatrix}\\
+=&
+\begin{pmatrix}
+	m & p\cdot\sigma \\
+	p\cdot\bar{\sigma} & m \\
+\end{pmatrix}
+\end{aligned}
+$$
+In the second line we have used
+$$
+	\sum_{s=1,2}
+$$
+
