@@ -684,6 +684,43 @@ $$
 $$
 In the second line we have used
 $$
-	\sum_{s=1,2}
+	\sum_{s=1,2}\xi^{s}\xi^{s\dagger}=1=
+\begin{pmatrix}
+	1 & 0 \\
+	0 & 1 \\
+\end{pmatrix}.
 $$
+Thus we arrive at the desired formula,
+$$
+	\sum_{s}u^{s}(p)\bar{u}^{s}(p)=\gamma\cdot p+m.
+$$
+Similarly,
+$$
+	\sum_{s}v^{s}(p)\bar{v}^{s}(p)=\gamma\cdot p-m.
+$$
+The combination $\gamma\cdot p$ occurs so often that Feynman introduced the notation $\not p\equiv\gamma^{\mu}p_{\mu}$. We will use this notation frequently from now on.
+## Dirac Matrices and Dirac Field Bilinears
+We saw in Section 3.2 that the quantity $\bar{\psi}\psi$ is a Lorentz scalar. It is also easy to show that $\bar{\psi}\gamma\psi$ ia a 4-vector —— we used this fact in writing down the Dirac Lagrangian(3.34). Now let us ask a more general question: Consider the expression $\bar{\psi}\Gamma\psi$, where $\Gamma$ is any $4\times4$ constant matrix. Can we decompose this expression into terms that have definite transformation properties under the Lorentz group? The answer is yes, if we write $\Gamma$ in terms of the following basis of sixteen $4\times4$ matrices, defined as antisymmetric combinations of $\gamma$-matrices:
+| |  |
+|:---  |:---:  |
+| 1 | 1 of these|
+| $\gamma^{\mu}$ | 4 of these |
+| $\gamma^{\mu\nu}=\frac{1}{2}[\gamma^{\mu},\gamma^{\nu}]\equiv\gamma^{[\mu}\gamma^{\nu]}\equiv-i\sigma^{\mu\nu}$ | 6 of these |
+| $\gamma^{\mu\nu\rho}=\gamma^{[\mu}\gamma^{\nu}\gamma^{\rho]}$ | 4 of these |
+| $\gamma^{\mu\nu\rho}\sigma=\gamma^{[\mu}\gamma^{\nu}\gamma^{\rho}\gamma^{\sigma]}$ | 1 of these |
+|  | 16 total |
+The Lorentz-transformation properties of these matrices are easy to determine. For example,
+$$
+\begin{aligned}
+	\bar{\psi}\gamma^{\mu\nu}\psi\to&(\bar{\psi}\Lambda^{-1}_{\frac{1}{2}})(\frac{1}{2}[\gamma^{\mu},\gamma^{\nu}])(\Lambda_{\frac{1}{2}}\psi)\\
+=&\frac{1}{2}\bar{\psi}(\Lambda^{-1}_{\frac{1}{2}}\gamma^{\mu}\Lambda_{\frac{1}{2}}\Lambda_{\frac{1}{2}}^{-1}\gamma^{\nu}\Lambda_{\frac{1}{2}}-\Lambda^{-1}_{\frac{1}{2}}\gamma^{\nu}\Lambda_{\frac{1}{2}}\Lambda_{\frac{1}{2}}^{-1}\gamma^{\mu}\Lambda_{\frac{1}{2}})\psi\\
+=&\Lambda^{\mu}_{\ \alpha}\Lambda^{\nu}_{\ \beta}\bar{\psi}\gamma^{\alpha\beta}\psi
+\end{aligned}
+$$
+Each set of matrices transforms as an antisymmetric tensor of successively higher rank.
+The last two sets of matrices can be simplified by introducing an additional gamma matrix,
+$$
+	\gamma^{5}\equiv i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}=-\frac{i}{4!}\epsilon^{\mu\nu\rho\sigma}\gamma_{\mu}\gamma_{\nu}\gamma_{\rho}\gamma_{\sigma}\tag{3.68}
+$$
+Then $\gamma^{\mu\nu\rho\sigma}=-i\epsilon^{\mu\nu\rho\sigma}\gamma^{5}$ and $\gamma^{a\mu\nu\rho}=+i\epsilon^{a\mu\nu\rho\sigma}\gamma_{\sigma}\gamma^{5}$. The matrix $\gamma^{5}$ has the following properties, all of which can be verified using (3.68) and the anti-commutation relations (3.22)
 
