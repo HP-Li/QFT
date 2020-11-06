@@ -556,7 +556,7 @@ $$
 	\begin{pmatrix}1\\0\end{pmatrix} \\
 \end{pmatrix}\tag{3.52}
 $$
-while for $ \xi=\begin{pmatrix}0\\1\end{pamtarix}$(spin down along the 3-axis) we have
+while for $ \xi=\begin{pmatrix}0\\1\end{pmatrix}$(spin down along the 3-axis) we have
 $$
 	u(p)=
 \begin{pmatrix}
@@ -582,7 +582,7 @@ $$
 	0\\
 \end{pmatrix}\tag{3.53}
 $$
-In the limit $\eta\rightarrow\infty$ the states degenerate into the two-component spinors of a massless particle. (We now see the reason for the factor of \sqrt{m} in (3.47): It keeps the spinor expressions finite in the massless limit.)
+In the limit $\eta\rightarrow\infty$ the states degenerate into the two-component spinors of a massless particle. (We now see the reason for the factor of $\sqrt{m}$ in (3.47): It keeps the spinor expressions finite in the massless limit.)
 The solutions (3.52) and (3.53) are eigenstates of the helicity operator,
 $$
 	h\equiv\hat{p}\cdot S=\frac{1}{2}\hat{p}_{i}
@@ -723,4 +723,30 @@ $$
 	\gamma^{5}\equiv i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}=-\frac{i}{4!}\epsilon^{\mu\nu\rho\sigma}\gamma_{\mu}\gamma_{\nu}\gamma_{\rho}\gamma_{\sigma}\tag{3.68}
 $$
 Then $\gamma^{\mu\nu\rho\sigma}=-i\epsilon^{\mu\nu\rho\sigma}\gamma^{5}$ and $\gamma^{a\mu\nu\rho}=+i\epsilon^{a\mu\nu\rho\sigma}\gamma_{\sigma}\gamma^{5}$. The matrix $\gamma^{5}$ has the following properties, all of which can be verified using (3.68) and the anti-commutation relations (3.22)
+$$
+\begin{aligned}
+	(\gamma^{5})^{\dagger}=&\gamma^{5}\\
+(\gamma^{5})^2=&1\\
+{\gamma^{5},\gamma^{\mu}}=&0
+\end{aligned}
+$$
+This last property implies that $[\gamma^{5},S^{\mu\nu}]=0$. Thus the Dirac representation must be reducible, since eigenvectors of $\gamma^{5}$ whose eigenvalues are different transform without mixing (this criterion for reducibility is known as Schur's lemma). In our basis,
+$$
+	\gamma^{5}=
+\begin{pmatrix}
+	-1 & 0 \\
+	0 & 1 \\
+\end{pmatrix}
+$$
+in block-diagonal form. So a Dirac spinor with only left- (right-) handed components is an eigenstates of $\gamma^{5}$with eigenvalue -1 (+1), and indeed these spinors do transform without mixing, as we saw explicitly in Section 3.2.
+Let us now rewrite our table of 4x4 matrices, and introduce some standard terminology:
+| 1 | scalar | 1 |
+| :--: | :--: | :--: |
+| $\gamma^{\mu}$ | vector | 4 |
+| $\sigma^{\mu\nu}=\frac{i}{2}[\gamma^{\mu},\gamma^{\nu}]$ | tensor | 6 |
+| $\gamma^{\mu}\gamma^{5}$ | pseudo-vector | 4 |
+| $\gamma^{5}$ | pseudo-scalar | 1 |
+|  |  | 16 |
+The terms pseudo-vector and pseudo-scalar arise from the fact that these quantities transform as a vector and scalar, respectively, under continuous Lorentz transformations, but with an additional sign change under parity transformations(as we will discuss in Section 3.6).
+From the vector and pseudo-vector matrices we can form two currents out of Dirac field bilinears:
 
