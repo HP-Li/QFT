@@ -487,7 +487,7 @@ m\\0
 \end{pmatrix}
 \end{aligned}
 $$
-The parameter $\eta$ is called the *rapidity*. It is the quantity that is additive under successsive boosts.
+The parameter $\eta$ is called the *rapidity*. It is the quantity that is additive under successive boosts.
 	Now apply the same boost to $u(p)$. According to Eqs(3.26) and (3.30),
 $$
 \begin{aligned}
@@ -594,7 +594,7 @@ $$
 A particle with $h=+\frac{1}{2}$ is called *right-handed*, while one with $h=-\frac{1}{2}$ is called *lift-handed*. The helicity of a massive particle depends on the frame of in the opposite direction (but its spin is unchanged). For a massless particle, which travels at the speed of light, one cannot perform such a boost.
 	The extremely simple form of $u(p)$ for a massless particle in a helicity eigenstate makes the behavior of such a particle easy to understand. In Chapter 1, it enabled us to guess the form of the $e^{+}e^{-}\to\mu^{+}\mu^{-}$ cross section in the massless limit. In subsequent chapters we will often do a mindless calculation first, then look at helicity eigenstates in the high-energy limit to understand what we have done.
 	Incidentally, we are now ready to understand the origin of the notation $\phi_{L}$ and $\phi_{R}$ for Weyl spinors. The solutions of the Weyl equations are states of definite helicity, corresponding to left- and right-handed particles, respectively. The Lorentz invariance of helicity (for a massless particle) is manifest in the notation of Weyl spinors, since $\phi_{L}$ and $\phi_{R}$ live in different representations of the Lorentz group.
-	It is covenient to write the normaliaztion condition for $u(p)$ in a Lorentz invariant way. We saw above that $\phi^{\dagger}\phi$ is not Lorentz invariant. Similary,
+	It is convenient to write the normalization condition for $u(p)$ in a Lorentz invariant way. We saw above that $\phi^{\dagger}\phi$ is not Lorentz invariant. Similarly,
 $$
 \begin{aligned}
 	u^{\dagger}u=&
@@ -616,8 +616,8 @@ Then by an almost identical calculation,
 $$
 	\bar{u}u=2m\xi^{\dagger}\xi\tag{3.57}
 $$
-This will be our normalization condition, once we also require that the two-component spinor $\xi$ be normalized as usual: $\xi^{\dagger}\xi=1$. It is also conventional to choose basis spionrs $\xi^{1}$ and $\xi^{2}$ (such as $\begin{pmatrix}1\\0\end{pmatrix}$ and $\begin{pmatrix}0\\1\end{pmatrix}$) that are orthogonal. For a massless particle Eq.(3.57) is trivial, so we must write the normalization condition in the form of (3.55)
-	Let us summarize our dicussion so far. The general solution of the Dirac equation can be wirtten as linear combination of plane waves. The positive-frequency waves are of the form
+This will be our normalization condition, once we also require that the two-component spinor $\xi$ be normalized as usual: $\xi^{\dagger}\xi=1$. It is also conventional to choose basis spinors $\xi^{1}$ and $\xi^{2}$ (such as $\begin{pmatrix}1\\0\end{pmatrix}$ and $\begin{pmatrix}0\\1\end{pmatrix}$) that are orthogonal. For a massless particle Eq.(3.57) is trivial, so we must write the normalization condition in the form of (3.55)
+	Let us summarize our discussion so far. The general solution of the Dirac equation can be written as linear combination of plane waves. The positive-frequency waves are of the form
 $$
 	\psi(x)=u(p)e^{-ip\cdot x},\quad p^2=m^2,\quad p^{0}>0.
 $$
@@ -659,7 +659,7 @@ $$
 $$
 where we have changed the sign of the 3-momentum in one factor of each spinor product.
 ### Spin Sums
-In evaluating Feynman diagrams, we will often wish to sum over the polarizationg states of a fermion. We can derive the relevant completeness relations with a simple calculation:
+In evaluating Feynman diagrams, we will often wish to sum over the polarization states of a fermion. We can derive the relevant completeness relations with a simple calculation:
 $$
 \begin{aligned}
 \sum_{s=1,2}u^{s}(p)\bar{u}^{s}(p)=&\sum_{s}
@@ -700,7 +700,7 @@ $$
 $$
 The combination $\gamma\cdot p$ occurs so often that Feynman introduced the notation $\not p\equiv\gamma^{\mu}p_{\mu}$. We will use this notation frequently from now on.
 ## Dirac Matrices and Dirac Field Bilinears
-We saw in Section 3.2 that the quantity $\bar{\psi}\psi$ is a Lorentz scalar. It is also easy to show that $\bar{\psi}\gamma\psi$ ia a 4-vector —— we used this fact in writing down the Dirac Lagrangian(3.34). Now let us ask a more general question: Consider the expression $\bar{\psi}\Gamma\psi$, where $\Gamma$ is any $4\times4$ constant matrix. Can we decompose this expression into terms that have definite transformation properties under the Lorentz group? The answer is yes, if we write $\Gamma$ in terms of the following basis of sixteen $4\times4$ matrices, defined as antisymmetric combinations of $\gamma$-matrices:
+We saw in Section 3.2 that the quantity $\bar{\psi}\psi$ is a Lorentz scalar. It is also easy to show that $\bar{\psi}\gamma\psi$ is a 4-vector —— we used this fact in writing down the Dirac Lagrangian (3.34). Now let us ask a more general question: Consider the expression $\bar{\psi}\Gamma\psi$, where $\Gamma$ is any $4\times4$ constant matrix. Can we decompose this expression into terms that have definite transformation properties under the Lorentz group? The answer is yes, if we write $\Gamma$ in terms of the following basis of sixteen $4\times4$ matrices, defined as antisymmetric combinations of $\gamma$-matrices:
 | |  |
 |:---  |:---:  |
 | 1 | 1 of these|
@@ -749,4 +749,19 @@ Let us now rewrite our table of 4x4 matrices, and introduce some standard termin
 |  |  | 16 |
 The terms pseudo-vector and pseudo-scalar arise from the fact that these quantities transform as a vector and scalar, respectively, under continuous Lorentz transformations, but with an additional sign change under parity transformations(as we will discuss in Section 3.6).
 From the vector and pseudo-vector matrices we can form two currents out of Dirac field bilinears:
+$$
+	j^{\mu}(x)=\bar{\psi}(x)\gamma^{\mu}\psi(x);\quad j^{\mu5}(x)=\bar{\psi}\gamma^{\mu}\gamma^{5}\psi(x).\tag{3.73}
+$$
+Let us compute the divergences of these currents, assuming that $\psi$ satisfies the Dirac equation:
+$$
+\begin{aligned}
+\partial_{\mu}j^{\mu}=&(\partial_{\mu}\bar{\psi})\gamma^{\mu}\psi+\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi\\
+=&(im\bar{\psi})\psi+\bar{\psi}(-im\psi)\\
+=&0\tag{3.74}
+\end{aligned}
+$$
+Thus $j^{\mu}$ is always conserved if $\psi(x)$ satisfies the Dirac equation. When we couple the Dirac field to the electromagnetic field, $j^{\mu}$ will become the electric current density. Similarly, one can compute
+$$
+	\partial_{\mu}j^{\mu5}=2im\bar{\psi}\gamma^{5}\psi
+$$
 
