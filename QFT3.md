@@ -605,6 +605,7 @@ $$
 	\sqrt{p\cdot\sigma}\xi \\
 	\sqrt{p\cdot\bar{\sigma}}\xi \\
 \end{pmatrix}\\
+=&(p\cdot\sigma+p\cdot\bar{\sigma})\xi^{\dagger}\xi\\
 =&2E_{p}\xi^{\dagger}\xi
 \end{aligned}\tag{3.55}
 $$
@@ -614,7 +615,35 @@ $$
 $$
 Then by an almost identical calculation,
 $$
-	\bar{u}u=2m\xi^{\dagger}\xi\tag{3.57}
+\begin{align}
+\bar{u}u=&
+\begin{pmatrix}
+	\xi^{\dagger}\sqrt{p\cdot\sigma} & \xi^{\dagger}\sqrt{p\cdot\bar{\sigma}} \\
+\end{pmatrix}\gamma^0
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi \\
+	\sqrt{p\cdot\bar{\sigma}}\xi \\
+\end{pmatrix}\\
+=&\begin{pmatrix}
+	\xi^{\dagger}\sqrt{p\cdot\sigma} & \xi^{\dagger}\sqrt{p\cdot\bar{\sigma}} \\
+\end{pmatrix}
+\begin{pmatrix}
+0&1\\1&0
+\end{pmatrix}
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi \\
+	\sqrt{p\cdot\bar{\sigma}}\xi \\
+\end{pmatrix}\\
+=&\begin{pmatrix}
+	\xi^{\dagger}\sqrt{p\cdot\bar{\sigma}} & \xi^{\dagger}\sqrt{p\cdot\sigma} \\
+\end{pmatrix}
+\begin{pmatrix}
+	\sqrt{p\cdot\sigma}\xi \\
+	\sqrt{p\cdot\bar{\sigma}}\xi \\
+\end{pmatrix}\\
+=&2\sqrt{p\cdot\bar{\sigma}}\sqrt{p\cdot\sigma}\xi^{\dagger}\xi\\
+=&2m\xi^{\dagger}\xi\tag{3.57}\\
+\end{align}
 $$
 This will be our normalization condition, once we also require that the two-component spinor $\xi$ be normalized as usual: $\xi^{\dagger}\xi=1$. It is also conventional to choose basis spinors $\xi^{1}$ and $\xi^{2}$ (such as $\begin{pmatrix}1\\0\end{pmatrix}$ and $\begin{pmatrix}0\\1\end{pmatrix}$) that are orthogonal. For a massless particle Eq.(3.57) is trivial, so we must write the normalization condition in the form of (3.55)
 	Let us summarize our discussion so far. The general solution of the Dirac equation can be written as linear combination of plane waves. The positive-frequency waves are of the form
