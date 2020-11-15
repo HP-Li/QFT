@@ -798,3 +798,9 @@ $$
 j^{\mu}_{L}=\bar{\psi}\gamma^{\mu}(\frac{1-\gamma^{5}}{2})\psi,\quad j^{\mu}_{R}=\bar{\psi}\gamma^{\mu}(\frac{1+\gamma^{5}}{2})\psi.
 $$
 When $m=0$, these are the electric current densities of left-handed and right-handed particles, respectively, and are separately conserved.
+The two currents $j^{\mu}(x)$ and $j^{\mu5}(x)$ are the Noether currents corresponding to the two transformations
+$$
+	\psi(x)\to e^{i\alpha}\psi(x)\quad and \quad \psi(x)\to e^{i\alpha\gamma^{5}}\psi(x).
+$$
+The first of these is a symmetry of the Dirac Lagrangian (3.34). The scond, called a *chiral transformation*, is a symmetry of the derivative term in $\mathcal{L}$ but not the mass term; thus, Noether's theorem confirms that the axial vector current is conserved only if $m=0$.
+Products of Dirac bilinears obey interchange relations, known as *Fierz identities*. We will discuss only the simplest identity is most easily written in terms of the two-component Weyl spinors introduced in Eq.(3.36).
