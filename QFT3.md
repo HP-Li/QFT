@@ -660,7 +660,7 @@ $$
 $$
 which we normalize according to
 $$
-\bar{u}^{r}(p)u^{s}(p)=2m\delta^{rs}\quad or u^{r\dagger}(p)u^{s}(p)=2E_{p}\delta^{rs}
+\bar{u}^{r}(p)u^{s}(p)=2m\delta^{rs}\quad or\quad u^{r\dagger}(p)u^{s}(p)=2E_{p}\delta^{rs}
 $$
 In exactly the same way, we can find the negative-frequency solutions:
 $$
@@ -676,7 +676,7 @@ $$
 $$
 where $\eta^{s}$ is another basis of two-component spinors. These solutions are normalized according to
 $$
-	\bar{v}^{r}v^{s}(p)=-2m\delta^{rs}\quad or v^{r\dagger}(p)v^{s}(p)=+2E_{p}\delta^{rs}.
+	\bar{v}^{r}v^{s}(p)=-2m\delta^{rs}\quad or\quad v^{r\dagger}(p)v^{s}(p)=+2E_{p}\delta^{rs}.
 $$
 The $u$'s and $v$'s are also orthogonal to each other:
 $$
@@ -793,4 +793,8 @@ Thus $j^{\mu}$ is always conserved if $\psi(x)$ satisfies the Dirac equation. Wh
 $$
 \partial_{\mu}j^{\mu5}=2im\bar{\psi}\gamma^{5}\psi
 $$
-
+If $m=0$, this current (often called the *axial vector current*) is also conserved. It is then useful to form the linear combinations
+$$
+j^{\mu}_{L}=\bar{\psi}\gamma^{\mu}(\frac{1-\gamma^{5}}{2})\psi,\quad j^{\mu}_{R}=\bar{\psi}\gamma^{\mu}(\frac{1+\gamma^{5}}{2})\psi.
+$$
+When $m=0$, these are the electric current densities of left-handed and right-handed particles,
