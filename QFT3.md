@@ -797,4 +797,4 @@ If $m=0$, this current (often called the *axial vector current*) is also conserv
 $$
 j^{\mu}_{L}=\bar{\psi}\gamma^{\mu}(\frac{1-\gamma^{5}}{2})\psi,\quad j^{\mu}_{R}=\bar{\psi}\gamma^{\mu}(\frac{1+\gamma^{5}}{2})\psi.
 $$
-When $m=0$, these are the electric current densities of left-handed and right-handed particles,
+When $m=0$, these are the electric current densities of left-handed and right-handed particles, respectively, and are separately conserved.
