@@ -757,11 +757,11 @@ $$
 \begin{aligned}
 \partial_{\mu}j^{\mu}=&(\partial_{\mu}\bar{\psi})\gamma^{\mu}\psi+\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi\\
 =&(im\bar{\psi})\psi+\bar{\psi}(-im\psi)\\
-=&0\tag{3.74}
-\end{aligned}
+=&0
+\end{aligned}\tag{3.74}
 $$
 Thus $j^{\mu}$ is always conserved if $\psi(x)$ satisfies the Dirac equation. When we couple the Dirac field to the electromagnetic field, $j^{\mu}$ will become the electric current density. Similarly, one can compute
 $$
-	\partial_{\mu}j^{\mu5}=2im\bar{\psi}\gamma^{5}\psi
+\partial_{\mu}j^{\mu5}=2im\bar{\psi}\gamma^{5}\psi
 $$
 
