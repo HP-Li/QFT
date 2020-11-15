@@ -678,7 +678,7 @@ where $\eta^{s}$ is another basis of two-component spinors. These solutions are 
 $$
 	\bar{v}^{r}v^{s}(p)=-2m\delta^{rs}\quad or v^{r\dagger}(p)v^{s}(p)=+2E_{p}\delta^{rs}.
 $$
-The u's and v's are also orthogonal to each other:
+The $u$'s and $v$'s are also orthogonal to each other:
 $$
 	\bar{u}^{r}(p)v_{s}(p)=\bar{v}^{r}(p)u^{s}(p)=0
 $$
